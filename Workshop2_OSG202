@@ -1,0 +1,64 @@
+#!/bin/bash
+
+while true; do
+echo "Please choose from the following options; type the option
+number and hit the <Enter> key."
+echo ""
+    echo "Menu:"
+    echo "1. Display the present working directory"
+    echo "2. List names of the files in a given directory"
+    echo "3. Display today's date and time"
+    echo "4. Display whether a file is a ordinary file or a directory"
+    echo "5. Execute a command line"
+    echo "6. Exit"
+echo "***************************"
+echo ""
+    
+read -p "Enter your choice and hit <Enter>: " choice
+
+    case $choice in
+        1)
+            pwd
+echo ""
+echo ""
+;;
+        2)
+            read -p "Enter directory path: " dir_path
+            ls $dir_path
+echo ""
+echo ""
+;;
+        3)
+            date
+echo ""
+echo ""
+;;
+        4)
+            read -p "Enter file path: " file_path
+            if [ -f $file_path ]; then
+                echo "$file_path is an ordinary file"
+            elif [ -d $file_path ]; then
+                echo "$file_path is a directory"
+            else
+                echo "$file_path is not a file or directory"
+            fi
+echo ""
+echo ""
+;;
+        5)
+            read -p "Enter command to execute: " cmd
+            eval $cmd
+		echo ""
+		echo ""
+;;
+        6)
+            break;;
+        *)
+            echo "Invalid input";;
+    esac
+done
+
+echo ""
+
+echo "This made by Pham Hung Son-HE173195"
+echo "Goodbye!"
