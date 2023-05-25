@@ -1,5 +1,11 @@
 #!/bin/bash
 
+#Assignment: Shell Programming
+#Class ID: SE1814
+#Student ID: HE173195
+#Student Name: Pham Hung Son
+#Source File: PhamHungSon_HE173195_ShellProgramming.sh
+
 while true; do
 echo "Please choose from the following options; type the option
 number and hit the <Enter> key."
